@@ -6,13 +6,6 @@ Name:		jpgraph
 Version:	%{ver}
 Release:	1
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 License:	GPL
 Source0:	http://www.aditus.nu/jpgraph/%{name}%{sver}.zip
 Source1:	http://www.aditus.nu/jpgraph/jpgraph_htmlmanual13.zip
