@@ -11,7 +11,7 @@ Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 Requires:	php-common >= 4.0.2
 Requires:	php-gd
-Requires:	%{_datadir}/fonts/TTF/
+Requires:	%{_datadir}/fonts/TTF
 BuildRequires:	unzip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
