@@ -1,14 +1,12 @@
 Summary:	Class for creating esientific and business charts
 Summary(pl):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
-Version:	1.12.2
+Version:	1.14
 Release:	1
 Group:		Libraries
-License:	GPL
-Source0:	http://jpgraph.techuk.com/jpgraph/downloads/%{name}%{version}.zip
-# Source0-md5:	666d934c67fb79f278e7695fd3660f75
-Source1:	http://www.aditus.nu/jpgraph/%{name}_htmlmanual13.zip
-# Source1-md5:	23fea08580bb609c03e4c448309fc00b
+License:	QPL
+Source0:	http://members.chello.se/jpgraph/jpgdownloads/%{name}-%{version}.tar.gz
+# Source0-md5:	f8d1f344518a1ea24c167db6ddc29c7d
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 Requires:	php-common >= 4.0.2
@@ -34,19 +32,19 @@ tworzenie zarówno prostych (,,na szybko'') jak i skomplikowanych,
 wymagaj±cych precyzji grafik.
 
 %prep
-%setup  -q -n %{name}-%{version} -a1
+%setup  -q
 %patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_phpsharedir}/%{name}
 
-install *.php	$RPM_BUILD_ROOT%{_phpsharedir}/%{name}
+install src/*.*		$RPM_BUILD_ROOT%{_phpsharedir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* changes* jpgraph_htmlmanual/*
+%doc README* docs/*
 %{_phpsharedir}/%{name}
