@@ -1,14 +1,12 @@
-%define ver	1.3.1
-%define sver	131
 Summary:	Class for creating esientific and business charts
 Summary(pl):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
-Version:	%{ver}
+Version:	1.12.2
 Release:	1
 Group:		Libraries
 License:	GPL
-Source0:	http://www.aditus.nu/jpgraph/%{name}%{sver}.zip
-# Source0-md5:	7912af3fa7673e55f1e62370e83d4de4
+Source0:	http://jpgraph.techuk.com/jpgraph/downloads/%{name}%{version}.zip
+# Source0-md5:	666d934c67fb79f278e7695fd3660f75
 Source1:	http://www.aditus.nu/jpgraph/%{name}_htmlmanual13.zip
 # Source1-md5:	23fea08580bb609c03e4c448309fc00b
 Patch0:		%{name}-config.patch
@@ -36,7 +34,7 @@ tworzenie zarówno prostych (,,na szybko'') jak i skomplikowanych,
 wymagaj±cych precyzji grafik.
 
 %prep
-%setup  -q -n %{name}%{sver} -a1
+%setup  -q -n %{name}-%{version} -a1
 %patch0 -p1
 
 %install
