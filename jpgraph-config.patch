@@ -1,7 +1,16 @@
-diff -urN jpgraph-1.14.org/src/jpgraph.php jpgraph-1.14/src/jpgraph.php
---- jpgraph-1.14.org/src/jpgraph.php	2004-01-10 13:07:56.003481241 +0100
-+++ jpgraph-1.14/src/jpgraph.php	2004-01-10 13:09:44.399916970 +0100
-@@ -154,7 +154,7 @@
+diff -urN jpgraph-1.17.orig/src/jpg-config.inc jpgraph-1.17/src/jpg-config.inc
+--- jpgraph-1.17.orig/src/jpg-config.inc	2005-01-16 22:31:50.000000000 +0100
++++ jpgraph-1.17/src/jpg-config.inc	2005-01-17 08:40:38.065112520 +0100
+@@ -39,7 +39,7 @@
+ //
+ //------------------------------------------------------------------------
+ // DEFINE("CACHE_DIR","/tmp/jpgraph_cache/");
+-// DEFINE("TTF_DIR","/usr/X11R6/lib/X11/fonts/truetype/");
++DEFINE("TTF_DIR","/usr/share/fonts/TTF/");
+ // DEFINE("MBTTF_DIR","/usr/share/fonts/ja/TrueType/");
+ 
+ //-------------------------------------------------------------------------
+@@ -164,7 +164,7 @@
  // Please note that the Apache user must be a member of the
  // specified group since otherwise it is impossible for Apache
  // to set the specified group.
@@ -10,12 +19,3 @@ diff -urN jpgraph-1.14.org/src/jpgraph.php jpgraph-1.14/src/jpgraph.php
  
  // What permissions should the cached file have
  // (Set to "" will give the default persmissions for the "PHP-user")
-@@ -221,7 +221,7 @@
- 	  DEFINE('TTF_DIR', $_SERVER['SystemRoot'] . '/fonts/');
-         }
-     } else {
--	DEFINE('TTF_DIR','/usr/X11R6/lib/X11/fonts/truetype/');
-+	DEFINE('TTF_DIR','/usr/share/fonts/TTF/');
-     }
- }
- 
