@@ -8,7 +8,9 @@ Release:	1
 Group:		Libraries
 License:	GPL
 Source0:	http://www.aditus.nu/jpgraph/%{name}%{sver}.zip
+# Source0-md5:	7912af3fa7673e55f1e62370e83d4de4
 Source1:	http://www.aditus.nu/jpgraph/%{name}_htmlmanual13.zip
+# Source1-md5:	23fea08580bb609c03e4c448309fc00b
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 Requires:	php-common >= 4.0.2
