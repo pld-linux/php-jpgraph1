@@ -15,6 +15,7 @@ Group(ru):	âÉÂÌÉÏÔÅËÉ
 Group(uk):	â¦ÂÌ¦ÏÔÅËÉ
 License:	GPL
 Source0:	http://www.aditus.nu/jpgraph/%{name}%{sver}.zip
+Source1:	http://www.aditus.nu/jpgraph/jpgraph_htmlmanual13.zip
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 Requires:	php-common >= 4.0.2
@@ -40,7 +41,7 @@ tworzenie zarówno prostych (,,na szybko'') jak i skomplikowanych,
 wymagaj±cych precyzji grafik.
 
 %prep
-%setup  -q -n %{name}%{sver}
+%setup  -q -n %{name}%{sver} -a1
 %patch0 -p1
 
 %install
@@ -56,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc *.gz jpgraph_htmlmanual/*
 %{_phpsharedir}/%{name}
