@@ -1,15 +1,7 @@
-diff -urN jpgraph131.org/jpgraph.php jpgraph131/jpgraph.php
---- jpgraph131.org/jpgraph.php	Sun Oct 28 15:51:21 2001
-+++ jpgraph131/jpgraph.php	Sun Oct 28 15:53:00 2001
-@@ -17,14 +17,14 @@
- //------------------------------------------------------------------
- // The full name of directory to be used as a cache. This directory MUST
- // be readable and writable for PHP. Must end with '/'
--DEFINE("CACHE_DIR","/tmp/jpgraph_cache/");
-+DEFINE("CACHE_DIR","/tmp/");
- 
- // What grou should the cached file belong to
- // (Set to "" will give the default group for the "PHP-user")
+diff -urN jpgraph-1.14.org/src/jpgraph.php jpgraph-1.14/src/jpgraph.php
+--- jpgraph-1.14.org/src/jpgraph.php	2004-01-10 13:07:56.003481241 +0100
++++ jpgraph-1.14/src/jpgraph.php	2004-01-10 13:09:44.399916970 +0100
+@@ -154,7 +154,7 @@
  // Please note that the Apache user must be a member of the
  // specified group since otherwise it is impossible for Apache
  // to set the specified group.
@@ -18,12 +10,12 @@ diff -urN jpgraph131.org/jpgraph.php jpgraph131/jpgraph.php
  
  // What permissions should the cached file have
  // (Set to "" will give the default persmissions for the "PHP-user")
-@@ -40,7 +40,7 @@
- DEFINE("USE_CACHE",true);
+@@ -221,7 +221,7 @@
+ 	  DEFINE('TTF_DIR', $_SERVER['SystemRoot'] . '/fonts/');
+         }
+     } else {
+-	DEFINE('TTF_DIR','/usr/X11R6/lib/X11/fonts/truetype/');
++	DEFINE('TTF_DIR','/usr/share/fonts/TTF/');
+     }
+ }
  
- // Directory for TTF fonts. Must end with '/'
--DEFINE("TTF_DIR","/usr/local/fonts/ttf/");
-+DEFINE("TTF_DIR","/usr/share/fonts/TTF/");
- 
- // If the color palette is full should JpGraph try to allocate
- // the closest match? If you plan on using background image or
