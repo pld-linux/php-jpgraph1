@@ -43,12 +43,10 @@ install -d $RPM_BUILD_ROOT%{_phpsharedir}/%{name}
 
 install *.php	$RPM_BUILD_ROOT%{_phpsharedir}/%{name}
 
-gzip -9nf README* changes*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz jpgraph_htmlmanual/*
+%doc README* changes* jpgraph_htmlmanual/*
 %{_phpsharedir}/%{name}
