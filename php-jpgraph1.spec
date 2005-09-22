@@ -9,7 +9,7 @@ Source0:	http://members.chello.se/jpgraph/jpgdownloads/%{name}-%{version}.tar.gz
 # Source0-md5:	fc364e1b56dea32bdace47411085cd72
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
-Requires:	php-common >= 4.3.8
+Requires:	php-common >= 3:4.3.8
 Requires:	php-gd
 Requires:	%{_datadir}/fonts/TTF
 BuildRequires:	unzip
