@@ -1,12 +1,12 @@
 Summary:	Class for creating esientific and business charts
 Summary(pl):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
-Version:	1.19
+Version:	1.20.2
 Release:	1
 Group:		Libraries
 License:	QPL
 Source0:	http://members.chello.se/jpgraph/jpgdownloads/%{name}-%{version}.tar.gz
-# Source0-md5:	fc364e1b56dea32bdace47411085cd72
+# Source0-md5:	e7903d725a4d61168d8ada554bba29e5
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 Requires:	php-common >= 3:4.3.8
