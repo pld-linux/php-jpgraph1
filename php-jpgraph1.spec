@@ -31,7 +31,12 @@ Note: The 1.x series is only for PHP4. It will not work on PHP5.
 %description -l pl
 JpGraph to w pe³ni obiektowo zorientowana biblioteka u³atwiaj±ca
 tworzenie zarówno prostych (,,na szybko'') jak i skomplikowanych,
-wymagaj±cych precyzji grafik.
+wymagaj±cych precyzji grafik. Biblioteka próbuje przypisaæ sensowne
+warto¶ci domy¶lne dla wiêkszo¶ci parametrów, aby uczyniæ krzyw± nauki
+w miarê p³ask±, jako ¿e w wiêkszo¶ci przypadków wystarcza u¿ycie kilku
+poleceñ do rysowania estetycznie wygl±daj±cych grafik.
+
+Uwaga: wersje 1.x s± tylko dla PHP4, nie bêd± dzia³aæ z PHP5.
 
 %prep
 %setup  -q
