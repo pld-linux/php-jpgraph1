@@ -1,5 +1,5 @@
 Summary:	Class for creating esientific and business charts
-Summary(pl.UTF-8):   Klasa do tworzenia naukowych i biznesowych wykresów
+Summary(pl.UTF-8):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
 Version:	1.20.2
 Release:	2
