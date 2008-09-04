@@ -2,8 +2,8 @@ Summary:	Class for creating esientific and business charts
 Summary(pl.UTF-8):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
 Version:	1.26
-Release:	2
-License:	QPL
+Release:	3
+License:	QPL 1.0
 Group:		Libraries
 Source0:	http://hem.bredband.net/jpgraph/%{name}-%{version}.tar.gz
 # Source0-md5:	13bd871fb1a405ae1bbf9c02ae5a35ac
@@ -61,6 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README* docs/*
+%doc README* docs/* CHANGELOG*.txt
 %{_appdir}
 %{_examplesdir}/%{name}-%{version}
