@@ -2,13 +2,15 @@ Summary:	Class for creating esientific and business charts
 Summary(pl.UTF-8):	Klasa do tworzenia naukowych i biznesowych wykresów
 Name:		jpgraph
 Version:	1.26
-Release:	1
+Release:	2
 License:	QPL
 Group:		Libraries
 Source0:	http://hem.bredband.net/jpgraph/%{name}-%{version}.tar.gz
 # Source0-md5:	13bd871fb1a405ae1bbf9c02ae5a35ac
 Patch0:		%{name}-config.patch
 URL:		http://www.aditus.nu/jpgraph/
+BuildRequires:	rpmbuild(macros) >= 1.461
+BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 Requires:	%{_datadir}/fonts/TTF
 Requires:	php(gd)
@@ -16,7 +18,7 @@ Requires:	php-common >= 3:4.3.8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_phpsharedir	%{_datadir}/php
+%define		_appdir			%{php_data_dir}/%{name}
 
 %description
 JpGraph is a fully OO graph library which makes it easy to both draw a
@@ -42,11 +44,17 @@ Uwaga: wersje 1.x są tylko dla PHP4, nie będą działać z PHP5.
 %setup  -q
 %patch0 -p1
 
+mv src/*.txt .
+mv src/Examples .
+
+# cleanup backups after patching
+find '(' -name '*~' -o -name '*.orig' ')' -print0 | xargs -0 -r -l512 rm -f
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_phpsharedir}/%{name}
-
-install src/*.*		$RPM_BUILD_ROOT%{_phpsharedir}/%{name}
+install -d $RPM_BUILD_ROOT{%{_appdir},%{_examplesdir}/%{name}-%{version}}
+cp -a src/* $RPM_BUILD_ROOT%{_appdir}
+cp -a Examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,4 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README* docs/*
-%{_phpsharedir}/%{name}
+%{_appdir}
+%{_examplesdir}/%{name}-%{version}
