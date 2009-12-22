@@ -1,13 +1,13 @@
 Summary:	Class for creating esientific and business charts
 Summary(pl.UTF-8):	Klasa do tworzenia naukowych i biznesowych wykresów
-Name:		jpgraph
+Name:		jpgraph1
 Version:	1.26
-Release:	3
+Release:	1
 License:	QPL 1.0
 Group:		Libraries
-Source0:	http://hem.bredband.net/jpgraph/%{name}-%{version}.tar.gz
+Source0:	http://hem.bredband.net/jpgraph/jpgraph-%{version}.tar.gz
 # Source0-md5:	13bd871fb1a405ae1bbf9c02ae5a35ac
-Patch0:		%{name}-config.patch
+Patch0:		jpgraph-config.patch
 URL:		http://www.aditus.nu/jpgraph/
 BuildRequires:	rpmbuild(macros) >= 1.461
 BuildRequires:	sed >= 4.0
@@ -15,6 +15,8 @@ BuildRequires:	unzip
 Requires:	%{_datadir}/fonts/TTF
 Requires:	php(gd)
 Requires:	php-common >= 3:4.3.8
+Provides:	jpgraph = %{version}-%{release}
+Obsoletes:	jpgraph < 2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,7 +43,7 @@ poleceń do rysowania estetycznie wyglądających grafik.
 Uwaga: wersje 1.x są tylko dla PHP4, nie będą działać z PHP5.
 
 %prep
-%setup  -q
+%setup  -q -n jpgraph-%{version}
 %patch0 -p1
 
 mv src/*.txt .
