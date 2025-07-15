@@ -39,7 +39,7 @@ poleceń do rysowania estetycznie wyglądających grafik.
 
 %prep
 %setup  -q -n jpgraph-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 mv src/Examples .
 
